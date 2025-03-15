@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #loginform {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('./assets/Login.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .login-container {
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(124, 80, 80, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .login-container h2 {
+            color: #727D73;
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 84%;
+            padding: 10px;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background-color: #c0392b;
+        }
+
+        #Signup {
+            width: 14%;
+            height: 3vw;
+            background-color: #F0F0D7;
+            border-radius: 1vmin;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 2%;
+            font-size: 1.4vw;
+            font-family: 'Arial';
+            color: #c0392b;
+            cursor: pointer;
+        }
+
+        #Signup:hover {
+            background-color: #e74d3cb6;
+            color: #F0F0D7;
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top" style="background-color: #bd5145b4;">
+        <div id="logoimage">
+            <div id="Logo" style="background-color: #c0392b;">
+                <svg width="7vmin" height="7vmin" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                    fill="#F0F0D7">
+                    <g>
+                        <path
+                            d="m96.836 77.32c-0.14063-0.70703-0.76563-1.2266-1.4844-1.2539-0.042968-0.003906-4.0859-0.23438-9.5625-6.8242-3.0039-3.6172-6.6484-4.8359-9.7109-5.1055 0.007813-0.027344 0.015625-0.054688 0.019531-0.082031h5.1602c10.32-0.35938 10.352-15.254 0-15.625h-62.5c-10.324 0.35937-10.352 15.254 0 15.625h5.1602c0.007812 0.027343 0.015625 0.054687 0.019531 0.082031-3.0586 0.27344-6.7031 1.4844-9.7109 5.1055-5.4766 6.5938-9.5234 6.8242-9.5312 6.8242-1.6211-0.046875-2.1602 2.3398-0.65625 2.9805 0.48828 0.22656 8.2773 3.7734 16.871 3.7734 4.5781-0.011718 9.6172-1.0156 13.527-4.1836 0.26562 2.3359 2.2305 4.1641 4.6328 4.1641h21.875c2.4062 0 4.3711-1.8281 4.6328-4.1641 8.8203 7.5938 25.629 2.8438 30.398 0.41016 0.65625-0.30469 1-1.0195 0.85938-1.7266zm-36.59-3.8945h-20.477c-7.2773 0-13.199-5.9219-13.199-13.199v-2.4258h46.875v2.4258c0 7.2773-5.9219 13.199-13.199 13.199zm25.699-17.188c0 2.5859-2.1016 4.6875-4.6875 4.6875h-4.6875v-9.375h4.6875c2.5859 0 4.6875 2.1055 4.6875 4.6875zm-12.5-1.5625h-46.875v-3.125c9.1836-0.003906 38.184 0.003907 46.875 0zm-50 6.25h-4.6875c-2.5859 0-4.6875-2.1016-4.6875-4.6875 0-2.5859 2.1016-4.6875 4.6875-4.6875h4.6875zm8.6562 15.602c-7.1133 5.0508-17.285 2.918-22.812 1.1523 2.0039-1.1172 4.5352-3.0625 7.3398-6.4414 2.1562-2.6016 4.9922-3.9531 8.3984-4.0391 0.57812 1.2148 1.2852 2.3555 2.1289 3.3828l-7.418 2.957c-1.5898 0.60547-1.0938 3.0469 0.57812 3.0156 0.19531 0 0.39062-0.035157 0.57812-0.11328l8.6992-3.4688c1.1484 0.91797 2.418 1.6914 3.7891 2.2773-0.34766 0.48047-0.77734 0.91797-1.2812 1.2773zm30.406 1.5859c0 0.86328-0.69922 1.5625-1.5625 1.5625h-21.875c-0.86328 0-1.5625-0.69922-1.5625-1.5625v-1.5625h25zm5.4102-1.582c-0.50391-0.36328-0.9375-0.80078-1.2891-1.2812 1.3711-0.58594 2.6406-1.3594 3.7891-2.2773l8.6992 3.4688c0.1875 0.078125 0.38281 0.11328 0.57812 0.11328 1.6719 0.03125 2.168-2.4062 0.57813-3.0156l-7.418-2.957c0.84375-1.0273 1.5508-2.168 2.1289-3.3828 3.4062 0.085937 6.2383 1.4375 8.3984 4.0391 2.8086 3.3789 5.3359 5.3242 7.3438 6.4414-5.5273 1.7617-15.703 3.8984-22.809-1.1484z" />
+                        <path
+                            d="m62.406 45.234c0.82812 0.25391 1.6992-0.21094 1.9531-1.0312l3.375-10.938c0.59766-1.9414 2.8984-3.5859 5.0234-3.5859 1.6641-0.019532 2.625 1.0664 2.1172 2.6641l-3.375 10.938c-0.32422 0.98438 0.46484 2.0391 1.4922 2.0234 0.66797 0 1.2852-0.42969 1.4922-1.1016l3.375-10.941c1.168-3.5352-1.4023-6.7852-5.1055-6.707-3.4922 0-7.0117 2.543-8.0078 5.7891l-3.375 10.938c-0.25 0.82422 0.21094 1.6992 1.0352 1.9531z" />
+                        <path
+                            d="m40.633 45.305c6.1797-0.16016 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                        <path
+                            d="m54.695 37.492c6.1797-0.16406 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                        <path
+                            d="m40.633 26.555c6.1797-0.16406 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                    </g>
+                </svg>
+            </div>
+            <div id="logotext" style="color: #c0392b;"><b>Genius</b></div>
+        </div>
+        <div id="texts">
+            <div id="Aigenerated" style="color: #F0F0D7; cursor: pointer;font-size: 1.5vw;"><b>AI generated
+                    Recipes</b></div>
+            <div id="options" style="color:#F0F0D7 ; cursor: pointer;font-size: 1.5vw;"><b>Options</b></div>
+            <div id="More" style="color: #F0F0D7; cursor: pointer;font-size: 1.5vw;"><b>More</b></div>
+            <div id="Signup" onclick="window.location.href='Signup.html';"><b>Signup</b></div>
+        </div>
+    </div>
+    <div id="loginform">
+        <div class="login-container">
+
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+
+            <div style="text-align: left; margin: 10px;">
+                <a href="#" style="color: #727D73; text-decoration: none;font-size: 2.5vmin;">Forgot Password?</a>
+            </div>
+            <button>Login</button>
+        </div>
+    </div>
+</body>
+
+</html>
