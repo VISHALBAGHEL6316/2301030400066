@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRecipeGenerator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="top">
+            <div id="logoimage">
+                <div id="Logo">
+                    <svg width="7vmin" height="7vmin" version="1.1" viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg" fill="#F0F0D7">
+                        <g>
+                            <path
+                                d="m96.836 77.32c-0.14063-0.70703-0.76563-1.2266-1.4844-1.2539-0.042968-0.003906-4.0859-0.23438-9.5625-6.8242-3.0039-3.6172-6.6484-4.8359-9.7109-5.1055 0.007813-0.027344 0.015625-0.054688 0.019531-0.082031h5.1602c10.32-0.35938 10.352-15.254 0-15.625h-62.5c-10.324 0.35937-10.352 15.254 0 15.625h5.1602c0.007812 0.027343 0.015625 0.054687 0.019531 0.082031-3.0586 0.27344-6.7031 1.4844-9.7109 5.1055-5.4766 6.5938-9.5234 6.8242-9.5312 6.8242-1.6211-0.046875-2.1602 2.3398-0.65625 2.9805 0.48828 0.22656 8.2773 3.7734 16.871 3.7734 4.5781-0.011718 9.6172-1.0156 13.527-4.1836 0.26562 2.3359 2.2305 4.1641 4.6328 4.1641h21.875c2.4062 0 4.3711-1.8281 4.6328-4.1641 8.8203 7.5938 25.629 2.8438 30.398 0.41016 0.65625-0.30469 1-1.0195 0.85938-1.7266zm-36.59-3.8945h-20.477c-7.2773 0-13.199-5.9219-13.199-13.199v-2.4258h46.875v2.4258c0 7.2773-5.9219 13.199-13.199 13.199zm25.699-17.188c0 2.5859-2.1016 4.6875-4.6875 4.6875h-4.6875v-9.375h4.6875c2.5859 0 4.6875 2.1055 4.6875 4.6875zm-12.5-1.5625h-46.875v-3.125c9.1836-0.003906 38.184 0.003907 46.875 0zm-50 6.25h-4.6875c-2.5859 0-4.6875-2.1016-4.6875-4.6875 0-2.5859 2.1016-4.6875 4.6875-4.6875h4.6875zm8.6562 15.602c-7.1133 5.0508-17.285 2.918-22.812 1.1523 2.0039-1.1172 4.5352-3.0625 7.3398-6.4414 2.1562-2.6016 4.9922-3.9531 8.3984-4.0391 0.57812 1.2148 1.2852 2.3555 2.1289 3.3828l-7.418 2.957c-1.5898 0.60547-1.0938 3.0469 0.57812 3.0156 0.19531 0 0.39062-0.035157 0.57812-0.11328l8.6992-3.4688c1.1484 0.91797 2.418 1.6914 3.7891 2.2773-0.34766 0.48047-0.77734 0.91797-1.2812 1.2773zm30.406 1.5859c0 0.86328-0.69922 1.5625-1.5625 1.5625h-21.875c-0.86328 0-1.5625-0.69922-1.5625-1.5625v-1.5625h25zm5.4102-1.582c-0.50391-0.36328-0.9375-0.80078-1.2891-1.2812 1.3711-0.58594 2.6406-1.3594 3.7891-2.2773l8.6992 3.4688c0.1875 0.078125 0.38281 0.11328 0.57812 0.11328 1.6719 0.03125 2.168-2.4062 0.57813-3.0156l-7.418-2.957c0.84375-1.0273 1.5508-2.168 2.1289-3.3828 3.4062 0.085937 6.2383 1.4375 8.3984 4.0391 2.8086 3.3789 5.3359 5.3242 7.3438 6.4414-5.5273 1.7617-15.703 3.8984-22.809-1.1484z" />
+                            <path
+                                d="m62.406 45.234c0.82812 0.25391 1.6992-0.21094 1.9531-1.0312l3.375-10.938c0.59766-1.9414 2.8984-3.5859 5.0234-3.5859 1.6641-0.019532 2.625 1.0664 2.1172 2.6641l-3.375 10.938c-0.32422 0.98438 0.46484 2.0391 1.4922 2.0234 0.66797 0 1.2852-0.42969 1.4922-1.1016l3.375-10.941c1.168-3.5352-1.4023-6.7852-5.1055-6.707-3.4922 0-7.0117 2.543-8.0078 5.7891l-3.375 10.938c-0.25 0.82422 0.21094 1.6992 1.0352 1.9531z" />
+                            <path
+                                d="m40.633 45.305c6.1797-0.16016 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                            <path
+                                d="m54.695 37.492c6.1797-0.16406 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                            <path
+                                d="m40.633 26.555c6.1797-0.16406 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                        </g>
+                    </svg>
+                </div>
+                <div id="logotext"><b>Genius</b></div>
+            </div>
+            <div id="texts">
+                <div id="Aigenerated" style="color: #F0F0D7; cursor: pointer;font-size: 1.5vw;"
+                    onclick="window.location.href='Aigeneratedrecipes.html';"><b>AI generated
+                        Recipes</b></div>
+                <div id="options" style="color:#F0F0D7 ; cursor: pointer;font-size: 1.5vw;"><b>Options</b></div>
+                <div id="More" style="color: #F0F0D7; cursor: pointer;font-size: 1.5vw;"><b>More</b></div>
+                <div id="userprofile">
+                    <div id="login" onclick="window.location.href='Loginpage.html';" style="margin-right: 8px;">
+                        <b>Login</b>
+                    </div>
+                    <div id="login" onclick="window.location.href='Loginpage.html';"><b>Signup</b></div>
+                </div>
+            </div>
+        </div>
+        <div id="background">
+            <image id="back">
+                <h2 id="title">AI Chef: Your Culinary Genius</h2>
+                <div id="inputfield">
+                    <input type="text" id="search" placeholder="Search for AI recipes....">
+                    <div id="icon">
+                        <i class="fas fa-search"
+                            onclick="this.style.transform='scale(0.8)'; setTimeout(() => { this.style.transform='scale(1)'; }, 200);"></i>
+                    </div>
+                </div>
+            </image>
+        </div>
+        <div id="input-ingrediant">
+            <div id="info">
+                <p id="infotext" style="color: #F0F0D7;">
+                    <b>Looking for new and creative recipes to try?</b><br>
+                    Our AI recipe generator can help!<br>
+                    Just enter a few ingredients or dietary restrictions, and our AI
+                    will generate a personalized recipe for you.<br> It's the perfect way
+                    to reduce food waste and cook meals that your whole family will love.
+                </p>
+            </div>
+
+            <div id="ingrediants">
+                <div id="headofingrediants">
+                    <h4>Pick Your Ingrediants</h4>
+                </div>
+                <div id="ingrediantlist">
+                    <div class="ingrediant">
+                        <input type="text" id="Mainingrediant" list="Mainingrediantoption">
+                        <label for='Mainingrediant' class='placeholder'>
+                            Main Ingrediant
+                        </label>
+                        <datalist id="Mainingrediantoption">
+                            <option value="Tomato">
+                            <option value="Onion">
+                            <option value="Garlic">
+                            <option value="Cobol">
+                            <option value="Go">
+                            <option value="Java">
+                            <option value="JavaScript">
+                        </datalist>
+                    </div>
+                    <div class="ingrediant" style="margin-top: 6vmin;">
+                        <input type="text" id="Mainingrediant" list="Mainingrediantoption">
+                        <label for='Mainingrediant' class='placeholder'>
+                            Secondary Ingrediant#1*
+                        </label>
+                    </div>
+
+                    <div class="ingrediant" style="margin-top: 6vmin;">
+                        <input type="text" id="Mainingrediant" list="Mainingrediantoption">
+                        <label for='Mainingrediant' class='placeholder'>
+                            Secondary Ingrediant#2*
+                        </label>
+                    </div>
+
+                    <div class="ingrediant" style="margin-top: 6vmin;">
+                        <input type="text" id="Mainingrediant" list="Mainingrediantoption">
+                        <label for='Mainingrediant' class='placeholder'>
+                            Secondary Ingrediant#3
+                        </label>
+                    </div>
+                    <div class="ingrediantteste" style="margin-top: 6vmin;">
+                        <input type="text" id="Mainingrediant" style="width:48%;margin-right: 0%;">
+                        <label for='Mainingrediant' class='placeholder'>
+                            Cuisine/Style
+                        </label>
+                        <input type="text" id="Mainingrediant" style="width:48%;margin-right: 5.7%;">
+                        <label for='Mainingrediant' class='placeholder' style="left: 51.8%;">
+                            Spice Level
+                        </label>
+                    </div>
+                    <div class="ingrediantteste" style="margin-top: 6vmin;">
+                        <input type="text" id="Mainingrediant" style="width:48%;margin-right: 0%;">
+                        <label for='Mainingrediant' class='placeholder'>
+                            Number of Members
+                        </label>
+                        <input type="text" id="Mainingrediant" "
+                            style=" width:48%;margin-right: 5.7%;">
+                        <label for='Mainingrediant' class='placeholder' style="left: 51.8%;">
+                            Cooking Time
+                        </label>
+                    </div>
+                </div>
+                <hr style="margin-top: 6vmin; border: 1px solid #F0F0D7;width: 74vw;">
+                <h3 style="margin-left: 4.8%;color: #F0F0D7;font-size: 1.8vw;margin-top:2%;">Send the recipe to your
+                    inbox</h3>
+                <div class="ingrediant" style="margin-top: 4%;">
+                    <input type="text" id="Mainingrediant">
+                    <label for='Mainingrediant' class='placeholder'>
+                        Your Email [optional]
+                    </label>
+                </div>
+                <div id="Sumit">
+                    <button id="Sumitbutton">
+                        Clear
+                    </button>
+                    <button id="Sumitbutton" style="margin-right:5%; background-color: rgb(125, 219, 111);">
+                        Create Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="Aigenerator">
+            <div id="Aigeneratedtop" style="font-size: 3.4vh; color: #F0F0D7;margin-left: 3%;">
+                <h2>Our AI Generators</h2>
+                <h3 style="font-size: 3vh; color: #F0F0D7;">Create more with our unique recipe generators, We have a
+                    recipe
+                    generator for everyone.</h4>
+            </div>
+            <div id="Generators">
+                <div id="Generatorsrow1">
+                    <div id="selectAigenerator">
+                        <h4 id="titleAigenerator">Salad Recipe Generator</h4>
+                        <img src="./assets/salad.png" id="imageofgenerators" />
+                    </div>
+                    <div id="selectAigenerator">
+                        <h4 id="titleAigenerator">Salad Recipe Generator</h4>
+                        <img src="./assets/soup.png" width="54%" height="47%" />
+                    </div>
+                </div>
+                <div id="Generatorsrow1" style="margin-top: 4%;">
+                    <div id="selectAigenerator">
+                        <h4 id="titleAigenerator">Salad Recipe Generator</h4>
+                        <img src="./assets/vegetarian.png" id="imageofgenerators" />
+                    </div>
+                    <div id="selectAigenerator">
+                        <h4 id="titleAigenerator">Salad Recipe Generator</h4>
+                        <img src="./assets/paste.png" id="imageofgenerators" />
+                    </div>
+                </div>
+                <div id="Generatorsrow1" style="margin-top: 4%;">
+                    <div id="selectAigenerator">
+                        <h4 id="titleAigenerator">Salad Recipe Generator</h4>
+                        <img src="./assets/salad.png" id="imageofgenerators" />
+                    </div>
+                    <div id="selectAigenerator">
+                        <h4 id="titleAigenerator">Salad Recipe Generator</h4>
+                        <img src="./assets/salad.png" id="imageofgenerators" />
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;justify-content: center;margin: 2%;">
+                <h3 style="background-color: rgb(125, 219, 111);padding: 1%;color: #F0F0D7;border-radius:35%;">Click
+                    here
+                    for
+                    more Generators
+                </h3>
+            </div>
+        </div>
+        <div id="footer" style=" color: #F0F0D7;padding-bottom: 2%;">
+            <h2 style="margin-left: 3%;">Follow us on social media for more delicious recipes and
+                cooking inspiration!</h2>
+            <p style="font-size: 3.2vh;font-family:'Courier New', Courier, monospace;margin-left: 3%;margin-right: 3%;">
+                We love sharing
+                our passion for cooking
+                with our followers on social media.Join
+                us on Facebook, Twitter,
+                Instagram and Medium for more delicious recipes, cooking tips, and behind-the-scenes content.</p>
+            <div id="socialmedia">
+                <i class="fab fa-facebook-f" id="socialicon" style="margin-left: 0;"></i>
+                <i class="fab fa-twitter" id="socialicon"></i>
+                <i class="fab fa-instagram" id="socialicon"></i>
+                <i class="fab fa-medium-m" id="socialicon"></i>
+            </div>
+        </div>
+        <div id="footer"
+            style="display: flex; flex-direction: row;justify-content: space-evenly;color: #F0F0D7; background-color: #5a655b;">
+            <div id="footerleft" style="align-self: center;">
+                <div id="logoimage">
+                    <div id="Logo">
+                        <svg width="7vmin" height="7vmin" version="1.1" viewBox="0 0 100 100"
+                            xmlns="http://www.w3.org/2000/svg" fill="#F0F0D7">
+                            <g>
+                                <path
+                                    d="m96.836 77.32c-0.14063-0.70703-0.76563-1.2266-1.4844-1.2539-0.042968-0.003906-4.0859-0.23438-9.5625-6.8242-3.0039-3.6172-6.6484-4.8359-9.7109-5.1055 0.007813-0.027344 0.015625-0.054688 0.019531-0.082031h5.1602c10.32-0.35938 10.352-15.254 0-15.625h-62.5c-10.324 0.35937-10.352 15.254 0 15.625h5.1602c0.007812 0.027343 0.015625 0.054687 0.019531 0.082031-3.0586 0.27344-6.7031 1.4844-9.7109 5.1055-5.4766 6.5938-9.5234 6.8242-9.5312 6.8242-1.6211-0.046875-2.1602 2.3398-0.65625 2.9805 0.48828 0.22656 8.2773 3.7734 16.871 3.7734 4.5781-0.011718 9.6172-1.0156 13.527-4.1836 0.26562 2.3359 2.2305 4.1641 4.6328 4.1641h21.875c2.4062 0 4.3711-1.8281 4.6328-4.1641 8.8203 7.5938 25.629 2.8438 30.398 0.41016 0.65625-0.30469 1-1.0195 0.85938-1.7266zm-36.59-3.8945h-20.477c-7.2773 0-13.199-5.9219-13.199-13.199v-2.4258h46.875v2.4258c0 7.2773-5.9219 13.199-13.199 13.199zm25.699-17.188c0 2.5859-2.1016 4.6875-4.6875 4.6875h-4.6875v-9.375h4.6875c2.5859 0 4.6875 2.1055 4.6875 4.6875zm-12.5-1.5625h-46.875v-3.125c9.1836-0.003906 38.184 0.003907 46.875 0zm-50 6.25h-4.6875c-2.5859 0-4.6875-2.1016-4.6875-4.6875 0-2.5859 2.1016-4.6875 4.6875-4.6875h4.6875zm8.6562 15.602c-7.1133 5.0508-17.285 2.918-22.812 1.1523 2.0039-1.1172 4.5352-3.0625 7.3398-6.4414 2.1562-2.6016 4.9922-3.9531 8.3984-4.0391 0.57812 1.2148 1.2852 2.3555 2.1289 3.3828l-7.418 2.957c-1.5898 0.60547-1.0938 3.0469 0.57812 3.0156 0.19531 0 0.39062-0.035157 0.57812-0.11328l8.6992-3.4688c1.1484 0.91797 2.418 1.6914 3.7891 2.2773-0.34766 0.48047-0.77734 0.91797-1.2812 1.2773zm30.406 1.5859c0 0.86328-0.69922 1.5625-1.5625 1.5625h-21.875c-0.86328 0-1.5625-0.69922-1.5625-1.5625v-1.5625h25zm5.4102-1.582c-0.50391-0.36328-0.9375-0.80078-1.2891-1.2812 1.3711-0.58594 2.6406-1.3594 3.7891-2.2773l8.6992 3.4688c0.1875 0.078125 0.38281 0.11328 0.57812 0.11328 1.6719 0.03125 2.168-2.4062 0.57813-3.0156l-7.418-2.957c0.84375-1.0273 1.5508-2.168 2.1289-3.3828 3.4062 0.085937 6.2383 1.4375 8.3984 4.0391 2.8086 3.3789 5.3359 5.3242 7.3438 6.4414-5.5273 1.7617-15.703 3.8984-22.809-1.1484z" />
+                                <path
+                                    d="m62.406 45.234c0.82812 0.25391 1.6992-0.21094 1.9531-1.0312l3.375-10.938c0.59766-1.9414 2.8984-3.5859 5.0234-3.5859 1.6641-0.019532 2.625 1.0664 2.1172 2.6641l-3.375 10.938c-0.32422 0.98438 0.46484 2.0391 1.4922 2.0234 0.66797 0 1.2852-0.42969 1.4922-1.1016l3.375-10.941c1.168-3.5352-1.4023-6.7852-5.1055-6.707-3.4922 0-7.0117 2.543-8.0078 5.7891l-3.375 10.938c-0.25 0.82422 0.21094 1.6992 1.0352 1.9531z" />
+                                <path
+                                    d="m40.633 45.305c6.1797-0.16016 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                                <path
+                                    d="m54.695 37.492c6.1797-0.16406 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                                <path
+                                    d="m40.633 26.555c6.1797-0.16406 6.1797-9.2148 0-9.375-6.1797 0.16016-6.1797 9.2109 0 9.375zm0-6.25c2.0547 0.035156 2.0547 3.0898 0 3.125-2.0547-0.039063-2.0547-3.0898 0-3.125z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div id="logotext"><b>Genius</b></div>
+                </div>
+                <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;">
+                    Add the Magic Touch to your<br> Cooking
+                </h2>
+            </div>
+            <div id="footercenter">
+                <h2>Company</h2>
+                <h3>About us</h3>
+                <h3>Cookie Policy</h3>
+                <h3>Licence Agreement</h3>
+                <h3>Privacy Policy</h3>
+                <h3>Security</h3>
+                <h3>Terms of use</h3>
+                <h3>Contact us</h3>
+            </div>
+            <div>
+                <h2>Get social media with us</h2>
+                <div id="socialmedia">
+                    <i class="fab fa-facebook-f" id="socialicon" style="margin-left: 0;"></i>
+                    <i class="fab fa-twitter" id="socialicon"></i>
+                    <i class="fab fa-instagram" id="socialicon"></i>
+                    <i class="fab fa-medium-m" id="socialicon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
