@@ -1,0 +1,20 @@
+﻿body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #AAB99A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#title {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: row;
+    background-color: #1a1d1aa8;
+    color: #F0F0D7;
+    width: 90%;
+    border-radius: 6vmin;
+}
