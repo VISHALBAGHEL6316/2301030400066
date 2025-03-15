@@ -1,0 +1,442 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #AAB99A;
+    margin-bottom: 2%;
+}
+
+#top {
+    display: flex;
+    width: 100%;
+    height: 11vmin;
+    background-color: #1a1d1aa8;
+    align-content: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+
+
+#Logo {
+    width: 7vmin;
+    height: 6.2vmin;
+    margin: 1vmin;
+    align-self: center;
+    position: relative;
+    margin-left: -0.2vmin;
+    background-color: #1a1d1aa8;
+    border-radius: 1vmin;
+    animation: fadeIn 1s;
+    transition: transform 0.3s;
+}
+
+#logoimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vmin;
+    height: 8vmin;
+    background-color: #F0F0D7;
+    margin-left: 2vmin;
+    border-radius: 1vmin;
+    align-self: center;
+    position: relative;
+    box-shadow: 0 0 10px #F0F0D7;
+}
+
+#logotext {
+    font-size: 4.5vmin;
+    color: #727D73;
+    font-family: 'Arial';
+    position: relative;
+    opacity: 1;
+    animation: text 1s;
+}
+
+#texts {
+    display: flex;
+    flex: 0.65;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#login {
+    width: 55%;
+    height: 3vw;
+    background-color: #F0F0D7;
+    border-radius: 1vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+    font-size: 1.4vw;
+    font-family: 'Arial';
+    color: #727D73;
+    cursor: pointer;
+}
+
+#userprofile {
+    display: flex;
+    flex: 0.4;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#login:hover {
+    background-color: #1a1d1aa8;
+    color: #F0F0D7;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#options:hover {
+    color: #F0F0D7;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#More:hover {
+    color: #F0F0D7;
+    transform: scale(1.1);
+    transition: transform 0.3s
+}
+
+#Aigenerated:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#background {
+    background-image: url('./assets/main.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    justify-self: center;
+}
+
+#inputfield {
+    margin-top: 5%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#search {
+    padding-left: 1em;
+    padding-right: 2em;
+    border-top-left-radius: 2vmin;
+    border-bottom-left-radius: 2vmin;
+    width: 100%;
+    font-size: 2vw;
+    background-color: #F0F0D7;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    outline: none;
+    border: none;
+    color: #727D73;
+}
+
+
+#title {
+    margin-bottom: 15%;
+    color: #D0DDD0;
+    font-size: 5vw;
+    font-family: 'Arial';
+    position: absolute;
+    opacity: 1;
+    align-self: center;
+}
+
+
+
+#icon {
+    background-color: #727D73;
+    color: #F0F0D7;
+    cursor: pointer;
+    width: 14%;
+    border-top-right-radius: 1.8vmin;
+    border-bottom-right-radius: 1.8vmin;
+    height: 8.1vmin;
+    font-size: 2.4vw;
+    align-self: center;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 8px;
+}
+
+.fa-search:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 0.9;
+        transform: translateX(0px);
+    }
+}
+
+#input-ingrediant {
+    margin-top: 5vmin;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+#info {
+    width: 79.8%;
+    height: 40vmin;
+    background-color: #727D73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3vmin;
+    border: 1.5vmin outset #F0F0D7;
+}
+
+#infotext {
+    font-size: 3.5vmin;
+    font-family: 'Times New Roman', Times, serif;
+    color: #374238;
+}
+
+#ingrediants {
+    margin-top: 10vmin;
+    width: 79.8%;
+    height: fit-content;
+    padding-bottom: 3%;
+    background-color: #727D73;
+    border-radius: 3vmin;
+    border: 1.5vmin outset #F0F0D7;
+}
+
+#ingrediantlist {
+    margin-top: 10vmin;
+}
+
+#ingrediant {
+    --padding: 16px;
+    --focus-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes inputFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes labelFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#headofingrediants {
+    font-size: 4vmin;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f9faf7;
+    color: #727D73;
+    width: 45vmin;
+    height: 6vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5vmin;
+    border-radius: 3vmin;
+}
+
+#Mainingrediant {
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 87.5%;
+    height: 6.5vmin;
+    border-radius: 2vmin;
+    padding: 2vmin;
+    font-size: 4vmin;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s;
+    padding-left: 2vmin;
+}
+
+.placeholder {
+    position: absolute;
+    font-size: 4vmin;
+    color: #727D73;
+    right: var(--padding);
+    padding: 0 4px;
+    transition: all 0.2s ease-in;
+    left: 13.6%;
+    margin-top: 3vmin;
+    background-color: white;
+    padding-left: 0.5vmin;
+
+}
+
+#Mainingrediant:is(:focus, :valid) {
+    border: 2px solid var(--focus-color);
+}
+
+#Mainingrediant:focus+.placeholder {
+    margin-top: -2.5vmin;
+    color: var(--focus-color);
+    transform: translateY(-2vmin);
+    background-color: #727D73;
+    color: #F0F0D7;
+    border-top-left-radius: 1vmin;
+    border-top-right-radius: 1vmin;
+    font-size: 3.5vmin;
+}
+
+#Mainingrediantoption option {
+    background-color: #e8e808;
+    color: #961616;
+    padding: 0.5vmin 1vmin;
+    font-size: 3vmin;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ccc;
+    margin: 0.2vmin 0;
+}
+
+.ingrediantteste {
+    display: flex;
+    flex-direction: row;
+}
+
+#Sumit {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-top: 4%;
+    justify-content: flex-end;
+}
+
+#Sumitbutton {
+    width: 15%;
+    height: 7vh;
+    margin-left: 5%;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 120%;
+    border: 0 0 0 0 solid;
+}
+
+#Aigenerator,
+#footer {
+    background-color: #727D73;
+    width: 79.9%;
+    height: fit-content;
+    margin-top: 5%;
+    margin-left: 9.6%;
+    border-radius: 3vmin;
+    border: 1.5vmin outset #F0F0D7;
+}
+
+#Generatorsrow1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#selectAigenerator {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imageofgenerators {
+    width: 47%;
+    height: 47%;
+    cursor: pointer;
+}
+
+#titleAigenerator {
+    color: #F0F0D7;
+    padding: 1.8%;
+    padding: 2% 2%;
+    width: 37%;
+    border-radius: 2vw;
+    background-color: rgb(125, 219, 111);
+    text-align: center;
+}
+
+#socialmedia {
+    margin-left: 3%;
+    margin-top: 3%;
+    display: inline;
+    flex-direction: row;
+}
+
+#socialicon {
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 4.5vh;
+    cursor: pointer;
+}
+
+#socialicon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+#footerleft,
+#footercenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+h3 {
+    margin-top: -1%;
+}
